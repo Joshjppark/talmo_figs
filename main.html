@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Welcome</title>
+<style>
+  /* ――― Global look ――― */
+  :root {
+    --lux-white: #f9f9f6;          /* soft "luxury" white */
+    --accent-blue: #c3cfe2;        /* the blue from the old gradient */
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+    background: var(--lux-white);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* ――― Header ――― */
+  header {
+    padding: 4rem 1rem 2rem;
+    text-align: center;
+  }
+  h1 { font-size: 3rem; margin: 0; }
+  p.tagline { color: #666; margin-top: .5rem; }
+
+  /* ――― List section ――― */
+  main {
+    flex: 1;
+    max-width: 720px;
+    width: 90%;
+    margin: 0 auto 4rem;
+    background: var(--accent-blue);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+    padding: 2rem 2rem;
+  }
+  main h3 {
+    margin-top: 0;
+    color: #1f3e5a;
+    letter-spacing: .02em;
+    font-size: 20px;
+  }
+
+  /* vertical list */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .link-card {
+    background: #fff;
+    border-radius: .75rem;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e0e6ef;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  }
+  .link-card a {
+    text-decoration: none;
+    color: #0d57a1;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  /* ――― Footer ――― */
+  footer {
+    text-align: center;
+    padding: 1rem 0 2rem;
+    font-size: .9rem;
+    color: #777;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+    <p class="tagline">Your curated doorway to the web.</p>
+  </header>
+
+  <main>
+    <h3>Links</h3>
+    <div class='links'>
+      <div class='link-card'><a href='https://example.com' target='_blank'>Example Site</a></div>
+      <div class='link-card'><a href='https://openai.com' target='_blank'>OpenAI</a></div>
+      <!-- Duplicate link-card blocks for more links -->
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Your Name</footer>
+</body>
+</html>
