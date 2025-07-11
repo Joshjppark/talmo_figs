@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Two‑Page Demo</title>
+<title>July 10 Meeting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
 
 <style>
@@ -43,7 +43,8 @@
   .tab-labels label:hover { background: #e7ebf2; }
   /* active label */
   #tab-1:checked ~ .tab-labels label[for="tab-1"],
-  #tab-2:checked ~ .tab-labels label[for="tab-2"] {
+  #tab-2:checked ~ .tab-labels label[for="tab-2"],
+  #tab-3:checked ~ .tab-labels label[for="tab-3"] {
     background: var(--tab-active);
     border: 1px solid #c4c9d1;
     border-bottom: none;
@@ -57,6 +58,7 @@
   }
   #tab-1:checked ~ #page1 { display: block; }
   #tab-2:checked ~ #page2 { display: block; }
+  #tab-3:checked ~ #page3 { display: block; }
   h1 { margin-top: 0; font-size: 2.5rem; text-align: center; }
 
   /* ----- Python Code Styler ----- */
@@ -107,6 +109,13 @@
   }
 
   #page2 .header-video {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  #page3 .header-video {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -169,11 +178,13 @@
   <!-- hidden radios control which page is visible -->
   <input type="radio" id="tab-1" name="tabs" checked>
   <input type="radio" id="tab-2" name="tabs">
+  <input type="radio" id="tab-3" name="tabs">
 
   <!-- tab bar -->
   <div class="tab-labels">
     <label for="tab-1">Non Deterministic Model</label>
     <label for="tab-2">Deterministic Model</label>
+    <label for="tab-3">Bounding Box Sampling Model</label>
   </div>
 
   <!-- full‑page sections -->
@@ -377,6 +388,37 @@ jit_inference = jax.jit(inference_fn)</code>
         </video>
       </div>
 
+    </main>
+  </section>
+
+
+  <section id="page3" class="tab-content">
+    <main>
+      <h1> Model with Bounding Box</h1>
+      <div class="header-video">
+          <video style="width: 70%; height: auto;" autoplay muted controls>
+              <source src="media_7_09/arm_bounding_box_train.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+  
+        <div class="text-wrapper">
+          <p>
+            The bad thing about training the model with 8 predefined targets was that the model was not
+            good at evalution targets that were placed outside of the 'ring' the 8 predefined targets made.
+            Also, the 8 predefined targets were roughly in the same XZ plane, which made the arm really bad
+            at evaluations for targets that lied outside this plane (directly closer or further away from the arm).
+          </p>
+          <p>
+            To fix this error, we trained the arm with points randomly sampled from a defined bounding box. The bounding box
+            was determined by visual look of how far the arm could reach in front of it without looking too constrained. 
+          </p>
+          <p>
+            Overall, I am pleased to see that the arm does really well on evaluations, and it is cool to see how model performance
+            is closely related to how it is trained. I haven't tested this model on evaluations outside of the training region since
+            I'll be working on different tasks because our main priority is not comparing model performance against training regions.
+          </p>
+        </div>  
+      </div>
     </main>
   </section>
 
