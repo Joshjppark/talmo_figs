@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meeting Notes</title>
+    <!-- <link rel="icon" type="images/png" href="https://emojiisland.com/cdn/shop/products/Emoji_Icon_-_Sunglasses_cool_emoji_large.png?v=1571606093"> -->
+    <meta name="description" content="This website is about potential meeting notes.">
+    <meta name="author" content="Joshua Park">
+
+    <style>
+      .image-row {
+        display: flex;
+        justify-content: center; /* Optional: centers the images horizontally */
+        gap: 10px; /* Optional: space between images */
+      }
+      .image-row img {
+        width: 450px; /* Adjust as needed */
+        height: auto;
+      }
+      .video-row {
+      display: flex;
+      justify-content: center;
+      gap: 100px; /* space between videos */
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
+      }
+      .video-row video {
+        width: 600px; /* Adjust width as needed */
+        height: auto;
+      }
+
+      .img-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+        padding: 0rem 7rem;
+        /* gap: 50px; */
+      }
+      .img-card img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        margin-bottom: 20px;
+        margin:auto;
+      }
+
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+    </header>
+
+    <main>
+      
+      <h1 style="text-align: center;"> Decoder Swap Model</h1>
+
+      <div class="img-grid">
+        <div class="img-card">
+          <img src="media_7_16/decoder_swap_hand_vel.png" alt="):">
+        </div>
+        <div class="img-card">
+          <img src="media_7_16/nodecoder_swap_hand_vel.png" alt="):">
+        </div>
+        <div class="img-card">
+          <img src="media_7_16/decoder_swap_hand_vel_hist.png" alt="):">
+        </div>
+        <div class="img-card">
+          <img src="media_7_16/nodecoder_swap_hand_vel_hist.png" alt="):">
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center;"">
+          <img style="width: 500px;" src="media_7_16/training_curves.png" alt="):">
+      </div>      
+
+      <hr style="height: 20px; background-color: #FFFFFF; border: none;">
+
+      <table>
+        <tr>
+          <td><a href="https://wandb.ai/salk/vnl-mjx-rl/runs/mouse_arm-reach_t_lower_lr_250714_194310?nw=nwuserjoshjppark" target="_blank">Decoder Swap Wandb Run 1</a></td>
+          <td><a href="https://wandb.ai/salk/vnl-mjx-rl/runs/mouse_arm-reach_t_lower_lr_250703_185821?nw=nwuserjoshjppark" target="_blank">No Decoder Swap Wandb Run 1</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://wandb.ai/salk/vnl-mjx-rl/runs/mouse_arm-reach_t_lower_lr_250716_185126/workspace?nw=nwuserjoshjppark" target="_blank">Decoder Swap Wandb Run 2</a></td>
+          <td><a href="https://wandb.ai/salk/vnl-mjx-rl/runs/mouse_arm-reach_t_lower_lr_250709_191739/workspace?nw=nwuserjoshjppark" target="_blank">No Decoder Swap Wandb Run 2</a></td>
+        </tr>
+      </table>
+
+
+
+
+      <hr style="height: 20px; background-color: #FFFFFF; border: none;">
+
+      <div class="video-row">
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_0.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <hr style="height: 20px; background-color: #FFFFFF; border: none;">
+
+      <div class="video-row">
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <hr style="height: 20px; background-color: #FFFFFF; border: none;">
+
+      <div class="video-row">
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_5.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <hr style="height: 20px; background-color: #FFFFFF; border: none;">
+
+      <div class="video-row">
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_6.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay mute loop controls>
+          <source src="media_7_16/predefined_targets_decoder_swap_7.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>
+
