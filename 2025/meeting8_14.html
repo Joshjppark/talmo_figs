@@ -26,6 +26,27 @@
         width: 450px; /* Adjust width as needed */
         height: auto;
       }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 columns */
+        justify-content: center;
+        grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+        gap: 10px; /* space between videos */
+        height: 60vh; /* fill screen vertically */
+        width: 100vw;  /* fill screen horizontally */
+        box-sizing: border-box;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .video-grid video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+
     </style>
   </head>
   <body>
@@ -113,6 +134,21 @@
           Your browser does not support the video tag.
         </video>
       </div> -->
+
+      <div class="video-grid">
+        <video src="media_8_14/arm-rollout0.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout1.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout2.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout3.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout4.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout5.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout6.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout7.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout8.mp4" autoplay muted loop></video>
+        <video src="media_8_14/arm-rollout9.mp4" autoplay muted loop></video>
+      </div>
+
+
 
     </main>
 
